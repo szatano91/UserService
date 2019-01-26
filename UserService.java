@@ -1,18 +1,21 @@
 package SDA;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserService {
 
-    private User[] users = new User[5];
-    private int count = 0;
+    private List<User> users = new ArrayList<>();
+
 
     public void addUser(User user) {
-        users[count++] = user;
+        users.add(user);
     }
 
     public void printAll() {
 
-        for (int i = 0; i < users.length; i++) {
-            System.out.println(users[i]);
+        for (int i = 0; i < users.size(); i++) {
+            System.out.println(users.get(i));
         }
     }
 }

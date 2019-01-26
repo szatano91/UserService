@@ -7,11 +7,10 @@ public class User {
     private String Login;
 
     public User(String imie, String nazwisko, String haslo, String login) {
-        this.Imie = imie;
-        this.Nazwisko = nazwisko;
-        this.Haslo = haslo;
-        this.Login = login;
-
+        Imie = imie;
+        Nazwisko = nazwisko;
+        Haslo = haslo;
+        Login = login;
     }
 
     public String getImie() {
@@ -26,7 +25,7 @@ public class User {
         return Haslo;
     }
 
-    public String getLogin() {
+    public String getLogin(String szatno) {
         return Login;
     }
 
@@ -46,6 +45,13 @@ public class User {
         this.Login = login;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "Imie='" + Imie + '\'' +
+                ", Nazwisko='" + Nazwisko + '\'' +
+                ", Haslo='" + Haslo + '\'' +
+                ", Login='" + Login + '\'' +
+                '}';
+    }
 }
